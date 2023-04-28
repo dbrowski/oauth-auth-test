@@ -1,6 +1,11 @@
 import type { User } from "../interfaces";
 import useSwr from "swr";
 import Link from "next/link";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Paper from "@mui/material/Paper";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -12,19 +17,38 @@ export default function Index() {
   if (!data) return null;
 
   return (
-    <div>
-      <div>
-        <p>login</p>
-      </div>
-      <ul>
-        {data.map((user) => (
-          <li key={user.id}>
-            <Link href="/user/[id]" as={`/user/${user.id}`}>
-              {user.name ?? `User ${user.id}`}
+    <Paper elevation={3}>
+      <Grid
+        container
+        spacing={3}
+        justifyContent="center"
+        width="100%"
+        disableGutters
+        ml={0}
+        pt="5vh"
+        pb="5vh"
+      >
+        <Grid container item xs={12} justifyContent="center">
+          <Grid item xs={6}>
+            <Link href="/SignIn">
+              <Button variant="contained" size="large" sx={{ width: "100%" }}>
+                Sign In
+              </Button>
             </Link>
-          </li>
+          </Grid>
+        </Grid>
+        {data.map((user) => (
+          <Grid container item xs={12} justifyContent="center">
+            <Grid item xs={6}>
+              <Link href="/user/[id]" as={`/user/${user.id}`} passHref>
+                <Button variant="contained" sx={{ width: "100%" }}>
+                  {user.name ?? `User ${user.id}`}
+                </Button>
+              </Link>
+            </Grid>
+          </Grid>
         ))}
-      </ul>
-    </div>
+      </Grid>
+    </Paper>
   );
 }

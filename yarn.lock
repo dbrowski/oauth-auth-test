@@ -244,6 +244,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mui/icons-material@npm:^5.11.16":
+  version: 5.11.16
+  resolution: "@mui/icons-material@npm:5.11.16"
+  dependencies:
+    "@babel/runtime": ^7.21.0
+  peerDependencies:
+    "@mui/material": ^5.0.0
+    "@types/react": ^17.0.0 || ^18.0.0
+    react: ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: db70426b6ede049307b951fc622c6ab3b156a24589242bebbc7effd4b0df2d3c7aca93796ed8dfdf20776248778a798724c7a112f8f687c3b4a1ae813f98fb17
+  languageName: node
+  linkType: hard
+
 "@mui/material@npm:^5.12.2":
   version: 5.12.2
   resolution: "@mui/material@npm:5.12.2"
@@ -437,6 +453,13 @@ __metadata:
   version: 13.3.1
   resolution: "@next/swc-win32-x64-msvc@npm:13.3.1"
   conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@ping-identity-developer-enablement/dev-enablement-oidc@npm:^0.2.2-beta":
+  version: 0.2.2-beta
+  resolution: "@ping-identity-developer-enablement/dev-enablement-oidc@npm:0.2.2-beta"
+  checksum: 70d8df26dd68a449aed09d92fc78b442646112af5cf4dbbac4406425a0825507e214572f4bb97389fe84b05973dfc3ee50bc09e8947c3c320d390c0d7caafd78
   languageName: node
   linkType: hard
 
@@ -1010,7 +1033,9 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.10.6
     "@emotion/styled": ^11.10.6
+    "@mui/icons-material": ^5.11.16
     "@mui/material": ^5.12.2
+    "@ping-identity-developer-enablement/dev-enablement-oidc": ^0.2.2-beta
     "@types/node": ^18.16.1
     "@types/react": ^18.2.0
     "@types/react-dom": ^18.2.1
